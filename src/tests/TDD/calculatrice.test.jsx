@@ -19,4 +19,8 @@ describe('Calculateur', () => {
         expect(calculateur.multiply(5, 5)).toBe(25);
     });
 
+    // On test la division entre deux nombres pour la validation du test
+    test('Division de 5 / 5 doit faire 1', () => {
+        expect(calculateur.divide(5, 5)).toBe(1);
+    });
 });
