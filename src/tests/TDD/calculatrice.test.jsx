@@ -14,4 +14,9 @@ describe('Calculateur', () => {
         expect(calculateur.substract(5, 5)).toBe(0);
     });
 
+    // On test la multiplication entre deux nombres pour la validation du test
+    test('Multiplication de 5 * 5 doit faire 25', () => {
+        expect(calculateur.multiply(5, 5)).toBe(25);
+    });
+
 });
