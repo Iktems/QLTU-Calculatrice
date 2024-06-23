@@ -23,4 +23,10 @@ describe('Calculateur', () => {
     test('Division de 5 / 5 doit faire 1', () => {
         expect(calculateur.divide(5, 5)).toBe(1);
     });
+
+    // On test la division par zéro pour la validation du test
+    test('Division par zéro doit retourner une erreur', () => {
+        expect(() => calculateur.divide(5, 0)).toThrow();
+    });
+    
 });
