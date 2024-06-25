@@ -67,7 +67,7 @@ test.describe('Calculator', () => {
     expect(result).toBe('Infinity');
   });
 
-  test('Il doit reset la calculatrice', async ({
+  test('Il doit reset le calcul', async ({
     page
   }) => {
     await page.click('text=1');
