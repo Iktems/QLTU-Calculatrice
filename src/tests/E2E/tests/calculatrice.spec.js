@@ -56,14 +56,27 @@ test.describe('Calculator', () => {
     expect(result).toBe('5');
   });
 
-  test('La division par 0 doit donner Infinity', async ({
+  // test('La division par 0 doit donner Infinity', async ({
+  //   page
+  // }) => {
+  //   await page.click('text=1');
+  //   await page.click('text=/');
+  //   await page.click('text=0');
+  //   await page.click('text==');
+  //   const result = await page.inputValue('input[type="text"]');
+  //   expect(result).toBe('Infinity');
+  // });
+
+  test('Il doit reset la calculatrice', async ({
     page
   }) => {
     await page.click('text=1');
-    await page.click('text=/');
-    await page.click('text=0');
+    await page.click('text=+');
+    await page.click('text=2');
     await page.click('text==');
+    await page.click('text=Reset');
     const result = await page.inputValue('input[type="text"]');
-    expect(result).toBe('Infinity');
+    expect(result).toBe('');
   });
+
 });

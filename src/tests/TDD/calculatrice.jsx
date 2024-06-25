@@ -15,7 +15,7 @@ class Calculateur {
     divide(a, b) {
         // On ajoute une condition pour éviter la division par zéro
         if (b === 0) {
-            throw new Error('Division by zero is not allowed');
+            throw new Error('La division par 0 n\'est pas possible');
         }
         return a / b;
     }
